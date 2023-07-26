@@ -1,10 +1,10 @@
 // Add an event listener to the button to trigger the API request
-document.getElementById('fetchDataBtn').addEventListener('click', fetchData);
+document.getElementById('mealSearch').addEventListener('click', fetchData);
 
 // Function to fetch data from the API based on the user's input
 function fetchData() {
-  const ingredient = document.getElementById('searchBar').value;
-  const apiURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`;
+  var ingredient = document.getElementById('searchBar').value;
+  var apiURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`;
 
   // Fetch data from the API
   fetch(apiURL)
@@ -21,15 +21,15 @@ function fetchData() {
 
 // Function to display the fetched data in the results div
 function displayData(data) {
-  const resultsDiv = document.getElementById('results');
+  var resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = ''; // Clear previous results
 
   // Check if data contains any meals
   if (data.meals) {
     // Loop through the data and display each meal name as a link
     data.meals.forEach(meal => {
-      const mealName = meal.strMeal;
-      const mealLink = document.createElement('a');
+      var mealName = meal.strMeal;
+      var mealLink = document.createElement('a');
       mealLink.textContent = mealName;
       mealLink.href = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal.idMeal}`; // Replace with your desired link
       mealLink.className = 'meal-link';
