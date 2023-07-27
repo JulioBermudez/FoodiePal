@@ -6,16 +6,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FoodiePal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.22/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-<input type="text"id=searchBar placeholder="Enter Ingredient">
+    <div id="container">
+        <h1>FoodiePal</h1>
+        <div id="recipes"></div>
+      </div>
+    
+      <div id="search">
+        <!-- Add your search form or search-related content here -->
+        <input type="text"id=searchBar placeholder="Enter Ingredient">
 <button id="mealSearch" >Search</button>
+      </div>
 
-<!--script js-->
+<!-- Div to display the results -->
+<div id="results">
+    <ul id="mealList"></ul>
+</div>
+
+<!--JavaScript-->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.22/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.22/dist/js/uikit-icons.min.js"></script>
     <script src="./assets/js/script.js"></script>
