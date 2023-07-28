@@ -1,3 +1,4 @@
+/*
 // Add an event listener to the button to trigger the API request
 document.getElementById('fetchDataBtn').addEventListener('click', fetchData);
 
@@ -41,3 +42,13 @@ function displayData(data) {
     resultsDiv.innerHTML = 'No meals found for this ingredient.';
   }
 }
+*/
+
+//Parallax
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.parallax');
+  var instances = M.Parallax.init(elems);
+});
+
+
+      

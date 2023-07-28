@@ -1,0 +1,13 @@
+.custom-parallax-navBar {
+    display: flex;
+    justify-content: center;
+}
+
+
+#navBar {
+position: absolute;
+z-index: 1;
+width: 75%;
+display: flex;
+margin-top: 200px;
+}
