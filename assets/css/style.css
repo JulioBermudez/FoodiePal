@@ -1,38 +1,68 @@
 
-.custom-parallax-navBar {
-    display: flex;
-    justify-content: center;
+
+
+.parallax {
+  position: relative;
+  background-image: url("../image/oktoberfest-food-sausage-beer-and-bretzel-2022-02-08-22-39-27-utc.jpg");  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+ 
+}
+.parallax2 {
+  
+  background-image: url("../image/greek-village-salad-horiatiki-with-feta-cheese-ol-2021-08-28-02-42-04-utc.jpg");  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.nav-container {
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  margin-top: 10%;
+ 
+}
+
+.custom-container {
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+.custom-carrusell-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.custom-container-video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+.custom-container-video h2, .card-title {
+  text-align: center;
 }
 
 
-#navBar {
-position: absolute;
-z-index: 1;
-width: 75%;
-display: flex;
-margin-top: 200px;
+.custom-img-div {
+  object-fit: cover;
+  height: 10px;
+  
 }
 
-/* Set the body as a flex container with column layout */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    margin: 0;
-  }
 
-  /* Add some styling to the container */
-  #container {
-    max-width: 600px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-top: 20px;
-  }
 
-  /* Add some spacing for the search */
-  #search {
-    margin-top: 20px;
+@media only screen and (max-device-width: 1366px) {
+  .parallax-container {
+    background-attachment: scroll;
   }
-
+}
