@@ -1,18 +1,5 @@
 
 
-.slider-container {
-  display: flex;
-  justify-content: center;
-}
-.custom-slider {
-  width: 25%;
-  margin-top: 40px;
-}
-
-.custom-slider img {
-  object-fit: cover;
-}
-
 
 .parallax {
   position: relative;
@@ -23,6 +10,15 @@
   background-size: cover;
   min-height: 400px;
  
+}
+.parallax2 {
+  
+  background-image: url("../image/greek-village-salad-horiatiki-with-feta-cheese-ol-2021-08-28-02-42-04-utc.jpg");  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
 }
 
 .nav-container {
@@ -37,7 +33,16 @@
   display: flex;
   justify-content: center;
   
+  
 }
+
+.custom-carrusell-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 
 
 @media only screen and (max-device-width: 1366px) {
