@@ -1,38 +1,47 @@
 
-.custom-parallax-navBar {
-    display: flex;
-    justify-content: center;
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+}
+.custom-slider {
+  width: 25%;
+  margin-top: 40px;
+}
+
+.custom-slider img {
+  object-fit: cover;
 }
 
 
-#navBar {
-position: absolute;
-z-index: 1;
-width: 75%;
-display: flex;
-margin-top: 200px;
+.parallax {
+  position: relative;
+  background-image: url("../image/oktoberfest-food-sausage-beer-and-bretzel-2022-02-08-22-39-27-utc.jpg");  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+ 
 }
 
-/* Set the body as a flex container with column layout */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    margin: 0;
-  }
+.nav-container {
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  margin-top: 10%;
+ 
+}
 
-  /* Add some styling to the container */
-  #container {
-    max-width: 600px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-top: 20px;
-  }
+.custom-container {
+  display: flex;
+  justify-content: center;
+  
+}
 
-  /* Add some spacing for the search */
-  #search {
-    margin-top: 20px;
-  }
 
+@media only screen and (max-device-width: 1366px) {
+  .parallax-container {
+    background-attachment: scroll;
+  }
+}

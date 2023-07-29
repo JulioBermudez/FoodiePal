@@ -1,86 +1,53 @@
-
+/*----------------Get The Api For Tips----------------*/
 /*
-// Add an event listener to the button to trigger the API request
-document.getElementById('fetchDataBtn').addEventListener('click', fetchData);
-
-// Function to fetch data from the API based on the user's input
-function fetchData() {
-  const ingredient = document.getElementById('searchBar').value;
-  const apiURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`;
-
-// Add an event listener to the button to trigger the API request
-document.getElementById('mealSearch').addEventListener('click', mealSearch);
-
-// Function to fetch data from the API based on the user's input
-function mealSearch() {
-  var ingredient = document.getElementById('searchBar').value;
-  var apiURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`;
-
-
-  // Fetch data from the API
-  fetch(apiURL)
-    .then(response => response.json())
-    .then(data => {
-      // Display the data in the results div
-      displayData(data);
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-      document.getElementById('results').innerHTML = 'Error fetching data';
-    });
-}
-
-// Function to display the fetched data in the results div
-function displayData(data) {
-
-  const resultsDiv = document.getElementById('results');
-
-  var resultsDiv = document.getElementById('mealList');
-
-  resultsDiv.innerHTML = ''; // Clear previous results
-
-  // Check if data contains any meals
-  if (data.meals) {
-
-    // Loop through the data and display each meal name as a link
-    data.meals.forEach(meal => {
-      const mealName = meal.strMeal;
-      const mealLink = document.createElement('a');
-
-    // Loop through the data and display the first five meal names as list items
-    for (var i = 0; i < 5 && i < data.meals.length; i++) {
-      var meal = data.meals[i];
-      var mealName = meal.strMeal;
-      var mealLink = document.createElement('a');
-
-      mealLink.textContent = mealName;
-      mealLink.href = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal.idMeal}`; // Replace with your desired link
-      mealLink.className = 'meal-link';
-
-
-      // Append the link to the results div
-      resultsDiv.appendChild(mealLink);
-    });
-
-      var listItem = document.createElement('li');
-      listItem.appendChild(mealLink);
-      resultsDiv.appendChild(listItem);
+var apiEdaman = "https://api.edamam.com/api/recipes/v2?type=public&q=salad&app_id=13333c96&app_key=8e51eafcc4671e4b6d6838d206ecb0d9%09&imageSize=LARGE";
+$(function(){
+  fetch(apiEdaman).then(function(response){
+    if (response.ok) {
+      response.json().then(function(data){
+        localStorage.setItem("key", JSON.stringify(data))
+        var edamanData = JSON.parse(localStorage.getItem("key"))
+        console.log(edamanData);
+        sliderFunction(edamanData);
+      })
     }
+  })
+})
 
-  } else {
-    resultsDiv.innerHTML = 'No meals found for this ingredient.';
-  }
-}
-
-*/
-
-//Parallax
+/*---------------Slider Configuration-----------------*/
+/*
 document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.parallax');
-  var instances = M.Parallax.init(elems);
+  var elems = document.querySelectorAll('.slider');
+  M.Slider.init(elems,{duration: 900,});
+ 
 });
 
+function sliderFunction(edamanData){
+  var randomHits1 = parseInt(Math.random() * 20);
+  var randomHits2 = parseInt(Math.random() * 20);
+  var randomHits3 = parseInt(Math.random() * 20);
+  var randomHits4 = parseInt(Math.random() * 20);
 
-      
-=======
+  //Img 1
+  $("#sliderImg1El").attr("src", edamanData.hits[randomHits1].recipe.image);
+  $("#calImg1El").text(parseInt(edamanData.hits[randomHits1].recipe.calories) + " cal");
+  //Img 2
+  $("#sliderImg2El").attr("src", edamanData.hits[randomHits2].recipe.image);
+  $("#calImg2El").text(parseInt(edamanData.hits[randomHits2].recipe.calories) + " cal");
 
+  //Img 3
+  $("#sliderImg3El").attr("src", edamanData.hits[randomHits3].recipe.image);
+  $("#calImg3El").text(parseInt(edamanData.hits[randomHits3].recipe.calories) + " cal");
+
+  //Img 4
+  $("#sliderImg4El").attr("src", edamanData.hits[randomHits4].recipe.image);
+  $("#calImg4El").text(parseInt(edamanData.hits[randomHits4].recipe.calories) + " cal");
+
+}
+
+/*---------------------------------------------------*/
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.parallax');
+  var instances = M.Parallax.init(elems, 0);
+});
