@@ -1,3 +1,4 @@
+
 /*----------------Get The Api For Tips----------------*/
 /*
 var apiEdaman = "https://api.edamam.com/api/recipes/v2?type=public&q=salad&app_id=13333c96&app_key=8e51eafcc4671e4b6d6838d206ecb0d9%09&imageSize=LARGE";
@@ -18,7 +19,7 @@ $(function(){
 /*
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.slider');
-  M.Slider.init(elems,{duration: 900, height:400});
+  M.Slider.init(elems,{duration: 600, height:400});
  
 });
 
@@ -45,10 +46,11 @@ function sliderFunction(edamanData){
 
 }
 
-/*---------------------------------------------------*/
+/*----------------------Parallax-----------------------*/
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.parallax');
-  var instances = M.Parallax.init(elems, 0);
+  M.Parallax.init(elems, 0);
 });
+
 

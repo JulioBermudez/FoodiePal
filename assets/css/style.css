@@ -42,7 +42,22 @@
   justify-content: center;
 }
 
+.custom-container-video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+.custom-container-video h2, .card-title {
+  text-align: center;
+}
 
+
+.custom-img-div {
+  object-fit: cover;
+  height: 10px;
+  
+}
 
 
 
