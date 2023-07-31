@@ -1,5 +1,97 @@
+/*-----------------EDAMAN Api to get Recipes-----------------------------*/
+var searchTerm = document.location.search.split("=")[1]
 
-/*----------------Get The Api For Tips----------------*/
+
+$("#formId").on("submit", function(e){
+e.preventDefault();
+
+document.location.href="./recipes.html?searchTerm=" +$("#search"
+).val()
+
+
+})
+$("#formIdRecipes").on("submit", function (e){
+  e.preventDefault();
+  var text = $("#search").val()
+displayResult(text)
+  
+})
+
+function displayResult(searchTerm){
+ 
+  var apiEdaman = "https://api.edamam.com/api/recipes/v2?type=public&q= &app_id=13333c96&app_key=8e51eafcc4671e4b6d6838d206ecb0d9%09&imageSize=LARGE";
+apiEdaman = apiEdaman.split(" ");
+textInput = searchTerm
+
+alert(apiEdaman[0] + textInput + apiEdaman[1]);
+
+
+
+
+  fetch(apiEdaman[0] + textInput + apiEdaman[1]).then(function(response){
+    if (response.ok) {
+      response.json().then(function(data){
+        localStorage.setItem("key", JSON.stringify(data))
+        var edamanData = JSON.parse(localStorage.getItem("key"))
+        console.log(edamanData);
+        
+      })
+    }
+  })
+
+
+ 
+
+}
+
+displayResult(searchTerm);
+/*
+var apiEdaman = "https://api.edamam.com/api/recipes/v2?type=public&q= &app_id=13333c96&app_key=8e51eafcc4671e4b6d6838d206ecb0d9%09&imageSize=LARGE";
+apiEdaman = apiEdaman.split(" ");
+textInput = $("#search").val()
+
+console.log(textInput);
+
+$(function(){
+
+
+  fetch(apiEdaman[0] + textInput + apiEdaman[1]).then(function(response){
+    if (response.ok) {
+      response.json().then(function(data){
+        localStorage.setItem("key", JSON.stringify(data))
+        var edamanData = JSON.parse(localStorage.getItem("key"))
+        console.log(edamanData);
+        
+      })
+    }
+  })
+
+
+ 
+})
+
+
+/*------------------Api from Ninjas.com (Nutrition)------------------------*/
+/*
+var query = '1lb brisket and fries'
+$.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/nutrition?query=' + query,
+    headers: { 'X-Api-Key': 'XF9XtAse9elHuuwIPDkaRw==hIvovhlZsqksVbMr'},
+    contentType: 'application/json',
+    success: function(result) {
+        localStorage.setItem("nutrition" , JSON.stringify(result))
+        var nutritionData = JSON.parse(localStorage.getItem("nutrition"))
+        console.log(nutritionData);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+});
+console.log("XF9XtAse9elHuuwIPDkaRw==hIvovhlZsqksVbMr");
+
+
+/*----------------Get The Api For Carousell----------------*/
 /*
 var apiEdaman = "https://api.edamam.com/api/recipes/v2?type=public&q=salad&app_id=13333c96&app_key=8e51eafcc4671e4b6d6838d206ecb0d9%09&imageSize=LARGE";
 $(function(){
