@@ -58,7 +58,11 @@
   height: 10px;
   
 }
-
+#icon {
+  
+  width:100%;
+  
+}
 
 
 @media only screen and (max-device-width: 1366px) {
