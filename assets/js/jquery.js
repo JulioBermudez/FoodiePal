@@ -2,7 +2,6 @@
 //Gets the api, save it in Local Storage and use that data to print the cards with
 //the data of the search. Then if the user selct any card it will see all the details
 //of the recipe.
-
 var textInput = $("#inputTxt");
 $("#formId").on("submit", function (e) {
   e.preventDefault();
@@ -37,11 +36,10 @@ function inputFunction(inputDataLocalStorage) {
   for (let i = 0; i < inputDataLocalStorage.length; i++) {
     $("#img-" + [i]).attr("src", inputDataLocalStorage[i].image);
     $("#name-" + [i]).text(inputDataLocalStorage[i].name);
-    $("#cookTime-" + [i]).text(inputDataLocalStorage[i].cookTime + " min");
-    $("#calories-" + [i]).text(
-      inputDataLocalStorage[i].nutrients.caloriesKCal + " kcal"
+    $("#cookTime-" + [i]).text("Time: " + inputDataLocalStorage[i].cookTime + " min");
+    $("#calories-" + [i]).text("Calories: " + inputDataLocalStorage[i].nutrients.caloriesKCal + " kcal"
     );
-    $("#servings-" + [i]).text(inputDataLocalStorage[i].servings);
+    $("#servings-" + [i]).text("Servings:" + inputDataLocalStorage[i].servings);
   }
 }
 //click action to results will get the selected result Data
@@ -70,15 +68,16 @@ $("#card-container").click(function (event) {
     mainCard5();
   }
 });
+//If the user click on one of the result this will display that result with more details
 
+//Main Card Result Card 1
 function mainCard0() {
   $("#main-card-container").show();
   inputDataLocalStorage = JSON.parse(localStorage.getItem("key"));
   $("#imgBg-0").attr("src", inputDataLocalStorage[0].image);
   $("#nameBg-0").text(inputDataLocalStorage[0].name);
   $("#cookTimeBg-0").text(inputDataLocalStorage[0].cookTime + " min");
-  $("#caloriesBg-0").text(
-    inputDataLocalStorage[0].nutrients.caloriesKCal + " kcal"
+  $("#caloriesBg-0").text(inputDataLocalStorage[0].nutrients.caloriesKCal + " kcal"
   );
   $("#servingsBg-0").text(inputDataLocalStorage[0].servings);
   $("#description").text(inputDataLocalStorage[0].description);
@@ -100,6 +99,8 @@ function mainCard0() {
   }
 }
 
+
+//Main Card Result Card 2
 function mainCard1() {
   $("#main-card-container").show();
   inputDataLocalStorage = JSON.parse(localStorage.getItem("key"));
@@ -110,8 +111,9 @@ function mainCard1() {
     inputDataLocalStorage[1].nutrients.caloriesKCal + " kcal"
   );
   $("#servingsBg-0").text(inputDataLocalStorage[1].servings);
+  $("#description").text(inputDataLocalStorage[1].description);
 
-  var ingredientsPath = inputDataLocalStorage[0].ingredients;
+  var ingredientsPath = inputDataLocalStorage[1].ingredients;
   for (let index = 0; index < ingredientsPath.length; index++) {
     $(
       "<li>" +
@@ -122,24 +124,24 @@ function mainCard1() {
     ).appendTo("#ingredientsList");
   }
 
-  var stepsPath = inputDataLocalStorage[0].steps;
+  var stepsPath = inputDataLocalStorage[1].steps;
   for (let i = 0; i < stepsPath.length; i++) {
-    $("<li>" + inputDataLocalStorage[0].steps[i] + "</li>").appendTo("#steps");
+    $("<li>" + inputDataLocalStorage[1].steps[i] + "</li>").appendTo("#steps");
   }
 }
-
+//Main Card Result Card 3
 function mainCard2() {
   $("#main-card-container").show();
   inputDataLocalStorage = JSON.parse(localStorage.getItem("key"));
   $("#imgBg-0").attr("src", inputDataLocalStorage[2].image);
   $("#nameBg-0").text(inputDataLocalStorage[2].name);
   $("#cookTimeBg-0").text(inputDataLocalStorage[2].cookTime + " min");
-  $("#caloriesBg-0").text(
-    inputDataLocalStorage[2].nutrients.caloriesKCal + " kcal"
+  $("#caloriesBg-0").text(inputDataLocalStorage[2].nutrients.caloriesKCal + " kcal"
   );
   $("#servingsBg-0").text(inputDataLocalStorage[2].servings);
+  $("#description").text(inputDataLocalStorage[2].description);
 
-  var ingredientsPath = inputDataLocalStorage[0].ingredients;
+  var ingredientsPath = inputDataLocalStorage[2].ingredients;
   for (let index = 0; index < ingredientsPath.length; index++) {
     $(
       "<li>" +
@@ -150,12 +152,12 @@ function mainCard2() {
     ).appendTo("#ingredientsList");
   }
 
-  var stepsPath = inputDataLocalStorage[0].steps;
+  var stepsPath = inputDataLocalStorage[2].steps;
   for (let i = 0; i < stepsPath.length; i++) {
-    $("<li>" + inputDataLocalStorage[0].steps[i] + "</li>").appendTo("#steps");
+    $("<li>" + inputDataLocalStorage[2].steps[i] + "</li>").appendTo("#steps");
   }
 }
-
+//Main Card Result Card 4
 function mainCard3() {
   $("#main-card-container").show();
   inputDataLocalStorage = JSON.parse(localStorage.getItem("key"));
@@ -166,8 +168,9 @@ function mainCard3() {
     inputDataLocalStorage[3].nutrients.caloriesKCal + " kcal"
   );
   $("#servingsBg-0").text(inputDataLocalStorage[3].servings);
+  $("#description").text(inputDataLocalStorage[3].description);
 
-  var ingredientsPath = inputDataLocalStorage[0].ingredients;
+  var ingredientsPath = inputDataLocalStorage[3].ingredients;
   for (let index = 0; index < ingredientsPath.length; index++) {
     $(
       "<li>" +
@@ -178,12 +181,12 @@ function mainCard3() {
     ).appendTo("#ingredientsList");
   }
 
-  var stepsPath = inputDataLocalStorage[0].steps;
+  var stepsPath = inputDataLocalStorage[3].steps;
   for (let i = 0; i < stepsPath.length; i++) {
-    $("<li>" + inputDataLocalStorage[0].steps[i] + "</li>").appendTo("#steps");
+    $("<li>" + inputDataLocalStorage[3].steps[i] + "</li>").appendTo("#steps");
   }
 }
-
+//Main Card Result Card 5
 function mainCard4() {
   $("#main-card-container").show();
   inputDataLocalStorage = JSON.parse(localStorage.getItem("key"));
@@ -194,8 +197,9 @@ function mainCard4() {
     inputDataLocalStorage[4].nutrients.caloriesKCal + " kcal"
   );
   $("#servingsBg-0").text(inputDataLocalStorage[4].servings);
+  $("#description").text(inputDataLocalStorage[4].description);
 
-  var ingredientsPath = inputDataLocalStorage[0].ingredients;
+  var ingredientsPath = inputDataLocalStorage[4].ingredients;
   for (let index = 0; index < ingredientsPath.length; index++) {
     $(
       "<li>" +
@@ -206,12 +210,12 @@ function mainCard4() {
     ).appendTo("#ingredientsList");
   }
 
-  var stepsPath = inputDataLocalStorage[0].steps;
+  var stepsPath = inputDataLocalStorage[4].steps;
   for (let i = 0; i < stepsPath.length; i++) {
-    $("<li>" + inputDataLocalStorage[0].steps[i] + "</li>").appendTo("#steps");
+    $("<li>" + inputDataLocalStorage[4].steps[i] + "</li>").appendTo("#steps");
   }
 }
-
+//Main Card Result Card 6
 function mainCard5() {
   $("#main-card-container").show();
   inputDataLocalStorage = JSON.parse(localStorage.getItem("key"));
@@ -222,8 +226,9 @@ function mainCard5() {
     inputDataLocalStorage[5].nutrients.caloriesKCal + " kcal"
   );
   $("#servingsBg-0").text(inputDataLocalStorage[5].servings);
+  $("#description").text(inputDataLocalStorage[5].description);
 
-  var ingredientsPath = inputDataLocalStorage[0].ingredients;
+  var ingredientsPath = inputDataLocalStorage[5].ingredients;
   for (let index = 0; index < ingredientsPath.length; index++) {
     $(
       "<li>" +
@@ -234,9 +239,9 @@ function mainCard5() {
     ).appendTo("#ingredientsList");
   }
 
-  var stepsPath = inputDataLocalStorage[0].steps;
+  var stepsPath = inputDataLocalStorage[5].steps;
   for (let i = 0; i < stepsPath.length; i++) {
-    $("<li>" + inputDataLocalStorage[0].steps[i] + "</li>").appendTo("#steps");
+    $("<li>" + inputDataLocalStorage[5].steps[i] + "</li>").appendTo("#steps");
   }
 }
 /*--------------------------------------------------------------------------------------*/
