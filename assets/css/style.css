@@ -18,7 +18,7 @@
 
 .nav-container {
   width: 50%;
-  position: absolute;
+  position: relative;
   z-index: 1;
   margin-top: 10%;
 }
@@ -55,6 +55,10 @@
 .display-show {
   display: row;
 }
+.margin-top {
+  margin-top: 10px;
+}
+
 
 #icon {
   width: 100%;
@@ -64,6 +68,13 @@
   object-fit: cover;
   width: 300px;
   height: 300px;
+  border-radius: 10px;
+}
+#ingredients li {
+  text-align: left;
+}
+#main-card-container img {
+  border-radius: 10px;
 }
 #card-container img:hover,#main-card-container img:hover {
   cursor: pointer;
