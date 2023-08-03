@@ -1,0 +1,105 @@
+img{
+  border-radius: 10px;
+}
+.animation :hover {
+rotate: 5deg;
+cursor: pointer;;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.parallax {
+  position: relative;
+  background-image: url("../image/oktoberfest-food-sausage-beer-and-bretzel-2022-02-08-22-39-27-utc.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+.parallax2 {
+  background-image: url("../image/greek-village-salad-horiatiki-with-feta-cheese-ol-2021-08-28-02-42-04-utc.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.nav-container {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  margin-top: 10%;
+}
+
+.custom-container {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-carrusell-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.custom-container-video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items:center;
+}
+.custom-container-video h2,
+.card-title {
+  text-align: center;
+}
+
+.custom-img-div {
+  object-fit: cover;
+  height: 10px;
+}
+.display-hide {
+  display: none;
+}
+
+.display-show {
+  display: row;
+}
+.margin-top {
+  margin-top: 10px;
+}
+.custom-footer{
+  display: flex;
+  justify-content: space-evenly;
+}
+.custom-footer :hover {
+  cursor: pointer;
+}
+#icon {
+  width: 100%;
+}
+
+#card-container img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+#ingredients li {
+  text-align: left;
+}
+#main-card-container img {
+  border-radius: 10px;
+}
+#card-container img:hover,#main-card-container img:hover {
+  cursor: pointer;
+rotate:3deg;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax-container {
+    background-attachment: scroll;
+  }
+}
