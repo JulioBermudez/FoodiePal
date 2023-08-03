@@ -1,3 +1,6 @@
+img{
+  border-radius: 10px;
+}
 .parallax {
   position: relative;
   background-image: url("../image/oktoberfest-food-sausage-beer-and-bretzel-2022-02-08-22-39-27-utc.jpg");
