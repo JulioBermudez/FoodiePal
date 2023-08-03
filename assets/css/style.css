@@ -1,6 +1,11 @@
 img{
   border-radius: 10px;
 }
+a {
+text-decoration: none!important;
+color: white !important;
+}
+
 .animation :hover {
 rotate: 5deg;
 cursor: pointer;;
@@ -75,6 +80,10 @@ rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 .custom-footer :hover {
   cursor: pointer;
 }
+.custom-container-video {
+  margin-top: 30px;
+}
+
 #icon {
   width: 100%;
 }
@@ -96,6 +105,10 @@ rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 rotate:3deg;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#custom-logo {
+  width: 7%;
+  border-radius: none;
 }
 
 @media only screen and (max-device-width: 1366px) {
