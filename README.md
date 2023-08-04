@@ -2,6 +2,14 @@
 
 The Food Recipe App is a simple web application that allows users to browse and search for various food recipes. It displays a list of recipes with their names and ingredients, and users can also perform a search to find specific recipes based on their input.
 
+## Usage
+
+![FoodiePal](./assets/image/juliobermudez.github.io_FoodiePal_.png)
+
+![FoodiePal](./assets/image/juliobermudez.github.io_FoodiePal_%20(1).png)
+
+![FoodiePal](./assets/image/juliobermudez.github.io_FoodiePal_%20(2).png)
+
 ## Features
 
 - View a list of food recipes with their names and ingredients.
@@ -45,6 +53,13 @@ In a real application, this data would be fetched from a server or a database.
 
 This is a basic example of a food recipe app and may not have complete features or backend integration. It serves as a starting point for further development and customization.
 
+## Credits
+- Richard Taveras
+- Julio Bermudez
+- Felipe Sierra
+- Jovanni Bogardus
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
