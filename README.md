@@ -4,7 +4,7 @@ The Food Recipe App is a simple web application that allows users to browse and 
 
 ## Deployment Link
 
-https://github.com/JulioBermudez/FoodiePal
+https://juliobermudez.github.io/FoodiePal/
 
 👆Click Here 👆
 
