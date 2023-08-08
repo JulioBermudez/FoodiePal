@@ -8,6 +8,10 @@ https://juliobermudez.github.io/FoodiePal/
 
 👆Click Here 👆
 
+## GitHub PortFolio
+Julio Bermudez:
+https://github.com/JulioBermudez/Portfolio
+
 ## Usage
 
 ![FoodiePal](./assets/image/juliobermudez.github.io_FoodiePal_.png)
