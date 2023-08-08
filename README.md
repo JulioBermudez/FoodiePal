@@ -9,7 +9,7 @@ https://juliobermudez.github.io/FoodiePal/
 👆Click Here 👆
 
 ## GitHub PortFolio
-Julio Bermudez:
+Julio Bermudez :
 https://github.com/JulioBermudez/Portfolio
 
 ## Usage
