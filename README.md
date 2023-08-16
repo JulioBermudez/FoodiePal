@@ -15,6 +15,9 @@ https://github.com/JulioBermudez/Portfolio
 Richard Taveras :
 https://rich-taveras.github.io/Portfolio/
 
+Felipe Sierra :
+https://github.com/felipesierra10/Challenge-2-Portfolio
+
 ## Usage
 
 ![FoodiePal](./assets/image/juliobermudez.github.io_FoodiePal_.png)
